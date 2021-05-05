@@ -1,0 +1,739 @@
+/* used The W3C CSS Validation Service
+---> http://jigsaw.w3.org/css-validator/ */
+
+/***********************************
+*
+*
+*           GLOBAL CSS 
+*      
+*
+**************************************/
+/*  from google fonts */
+/* https://fonts.google.com/  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background: white;
+    padding: 10px;
+    display: contents;
+    font-family: "Poppins","Times New Roman", Times, serif;
+}
+
+
+main{
+    display: block;
+    margin: 25px 75px 25px 75px;
+    padding-left: 15%;
+}
+
+/***********************************
+*
+*
+*          
+*     
+*       APPLE IPHONE FRAME
+*
+*
+*
+*
+**************************************/
+ 
+.Apple_iPhone_X {
+    /* help center the iphone*/
+    /* margin: 0 auto; didnt work*/
+    position: relative;
+    display: block;
+    margin: 25px 35px 35px 25px;
+    float: left;
+    width: 360px;
+    height: 780px;
+
+    /*to obtain linear-gradent colors ---> https://webgradients.com/ */
+    background-image: linear-gradient(to top, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);   
+    
+    /*makes all the corners of frame round/circular*/
+    /* visual tool for border-radius --> https://9elements.github.io/fancy-border-radius/#2.0.85.0--780.360*/
+    /* article on border-radius: https://9elements.com/blog/css-border-radius/  */
+    border-radius: 40px; 
+    
+
+
+    /* OUTER FRAME LAYOUT */
+    /* BOX-SHADOW: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
+    /* the 4th px value is thickness of the box-shadow (spread-radius) */
+        /* offset-x | offset-y | blur-radius | color  */
+
+        /* because offset-x, offset-y, & blur-radius are
+            0px, the color box-shadow applies to whole thing */
+
+    /* COLORS: SHADES OF BLACK & GREY*/
+      /*https://www.colorhexa.com/191919*/
+    box-shadow:  0px 0px 0px 11px #1f1f1f,  /* shadow #1*/ /*very dark grey; almost black*/
+                 0px 0px 0px 13px #191919,  /* shadow #2*/ /*very dark grey; almost black*/
+                 0px 0px 0px 20px #100c08; /*shadow #3*/ /*smoky black*/ 
+}
+
+/***********************************
+*
+*           TOP SECTION
+*     SPEAKER/MIC & FRONT-CAMERA
+*
+**************************************/
+
+.Apple_iPhone_X .top_features{
+    top: 0px;
+    width: 56%;
+    height: 30px;
+    background-color: #1f1f1f; /*very dark grey; almost black*/
+
+    /* bottom left and right are circular but not top left & right */
+    border-radius: 0px 0px 40px 40px;
+
+    /*to center the black/greyish color 
+    background of the speaker/mic & front-camera*/
+    margin: 0 auto;
+}
+
+
+.top_features .speaker_mic {
+    left: 50%;
+
+    /* transform --> property lets you rotate, scale, skew, or 
+    translate an element. It modifies the coordinate space of 
+    the CSS visual formatting model.  */
+
+    /* translate() ---> repositions an element in 
+    the horizontal and/or vertical directions  */
+
+        /* (x-coordinate, y-coordinate) */
+    transform: translate(-30px, 6px);
+    height: 8px;
+    width: 15%;
+    background-color: #101010;
+    border-radius: 8px;
+
+    /* [inset] shadows is inside the frame, above background
+     but below content */
+    box-shadow: inset 0px -3px 3px 0px rgba(255, 255, 255, 0.2);
+}
+
+/* front-camera hole*/
+.top_features .front-camera {
+    /* position camera hole*/
+    left: 10%;
+    top: 0px;
+        /* (x-coordinate, y-coordinate) */
+    transform: translate(180px, 4px);
+    width: 12px;
+    height: 12px;
+    background-color: #101010; /* almost black*/
+    border-radius: 12px; /*make it circular*/
+
+
+    /* [inset] shadows is inside the frame, above background
+     but below content */
+    /*box-shadow: inset 0px -3px 2px 0px rgba(255, 255, 255, 0.2);*/
+
+    /* rgb colors: red, green, blue */
+    /* used RBG calculator from W3schools to get color*/
+    /* https://www.w3schools.com/colors/colors_rgb.asp  */
+    box-shadow: inset 0px -4px 2px 0px rgb(58, 55, 63);
+}
+
+.front-camera  .blue_dot_front_camera{
+    background-color: #007aa5; /*CG blue*/ 
+    width: 6px;
+    height: 6px;
+    border-radius: 4px; 
+    margin: 0 auto;
+    
+    /* [inset] shadows is inside the frame, above background
+    but below content */
+    box-shadow: inset 0px -2px 2px rgb(47, 37, 30);
+}
+
+/***********************************
+*
+*       TOP SECTION
+*           TIME
+*
+**************************************/
+
+/* the apple unlock icon */
+.unlock{
+    display: flex;  
+    margin: 25px;  
+}
+
+.unlock_icon{
+ 
+    margin: 0 auto;
+    width: 10%;
+}
+
+
+/* the time (clock) on the iphone */
+#time {
+    top: 40px;
+    padding-top: 40px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+/* day, month, date */
+#day_mo_date {
+    top: 80px;
+    padding-top: 80px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+}
+   
+/***********************************
+*
+*       BOTTOM SECTION
+*      FLASHLIGHT & CAMERA
+*
+**************************************/
+.Apple_iPhone_X span {
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    left: 30px;
+    
+}
+
+/* Adjacent sibling ( + ) combinator */
+
+/*  This means that the second element directly
+ follows the first, and both share the same parent.  */
+
+ /* 
+ so the second span (class="camera"), will match 
+ the first span (class="flashlight) and both of their
+ parents is the class="bottom_iphone_section".   */
+.bottom_iphone_section span + span {
+    left: auto;
+    right: 30px;
+}
+
+.flashlight_shortcut_icon, 
+.camera_shortcut_icon{
+position: absolute;
+margin: 0 auto;
+}
+.flashlight_shortcut_icon{
+    width: 50%;
+    top: 5px;
+    left: 11px;
+}
+
+.camera_shortcut_icon{
+    width: 75%;
+    top: 10px;
+    left: 6px;
+}
+
+.bottom_iphone_section .home_bar {
+    width: 140px;
+    height: 4px;
+    background-color: #f5f5f5; /* white smoke */
+
+    /*make all corners circular*/
+    border-radius: 10px; 
+
+    /*help center home bar*/
+    margin: 0px 110px auto;
+
+    /* position it at bottom of the phone,
+    below the action buttons*/
+    position: absolute;
+    bottom: 15px;
+}
+
+
+.top_features .speaker_mic,
+.top_features .front-camera,
+.Apple_iPhone_X time,
+.bottom_iphone_section span {
+    position: absolute;
+    display: block;
+    color: transparent;
+}
+
+
+/******************************************
+*
+*
+*
+*           
+*       SECOND IPHONE X FRAME
+*
+*
+*
+*
+********************************************/
+.Apple_iPhone_X_2{
+
+    /*float: right;*/
+    display: inline-block;
+    margin: 25px 50px auto;
+    /*margin: 50px 50px 50px auto
+    top: 0;*/
+    position: relative;
+    width: 360px;
+    height: 780px; 
+
+    /* For browsers that do not support gradients */
+    background-color: #1f1f1f; 
+
+    /* British racing green */
+    /*background-image: linear-gradient(to bottom, #004225, #100c08, 
+            #100c08, #100c08, #100c08, #100c08, #100c08);*/
+    background-image: linear-gradient(to bottom, #272727, #272727);
+    border-radius: 40px;
+
+    /* different shades of black */
+    box-shadow: 0px 0px 0px 11px #1f1f1f, /* shadow #1*/ /*very dark grey; almost black*/
+     0px 0px 0px 13px #191919, /* shadow #2*/ /*very dark grey; almost black*/ 
+     0px 0px 0px 20px #100c08; /* shadow #3 */ /* dark grey*/
+}
+
+.Apple_iPhone_X_2 .top_features{
+    top: 0px;
+    width: 56%;
+    height: 30px;
+    background-color: #1f1f1f; /*very dark grey; almost black*/
+
+    /* bottom left and right are circular but not top left & right */
+    border-radius: 0px 0px 40px 40px;
+
+    /*to center the black/greyish color 
+    background of the speaker/mic & front-camera*/
+    margin: 0 auto;
+}
+
+/* the time clock on the left side of the top feature,
+    on the left side of speaker/mic and camera  */
+#time_left_side{
+    color: white;
+    position: absolute;
+    top: 6px;
+    left: 33px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+/* cellular data signal bars */
+.sizing-box {
+    height: 10px;
+    width: 22px;
+}
+  
+.signal-bars {
+    float: right;
+    margin-right: 16%;
+    margin-top: -6%;
+}
+  
+.signal-bars .bar {
+    width: 4%;
+    margin-left: 1%;
+    min-height: 6%;
+    display: inline-block;
+    background-color: white;
+    border: thin solid white;
+}
+  
+.signal-bars .bar.first-bar {
+    height: 20%;
+}
+  
+.signal-bars .bar.second-bar {
+    height: 40%;
+}
+  
+.signal-bars .bar.third-bar {
+    height: 60%;
+}
+  
+.signal-bars .bar.fourth-bar {
+    height: 80%;
+}
+
+
+/*   wifi symbol  */
+.fa-wifi{
+    float: right;
+    margin-right: 10.25%;
+    margin-top: -4.5%;
+    color: white;
+}
+
+/*   battery icon    */
+.battery {
+    border: .75px solid white;
+    width: 9px;
+    height:17px;
+    padding: 4px;
+    border-radius: 3px;
+    /*position: relative;*/
+    margin: 15px 0;
+    transform: rotate(0.25turn);
+    display: block;
+    position: absolute;
+    top: -2.75px;
+    right: 0;
+    margin-right: 20px;
+}
+
+.battery_dot{
+    border: .75px solid white;
+    width: 3px;
+    height: 1px;
+    padding-top: -26px;
+    background-color: white;
+    transform: translate(-2px, -6px);
+}
+
+.battery-level{
+    height:50%;
+    background: #30b455; /*lime green*/
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+/*  home title at the top
+[below speaker and front-camera ]*/
+.home_section h1{
+    text-align: center;
+    height: 70px;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 100;
+    margin: 0;
+}
+
+/******************************************
+*
+*       Albums body region
+*           
+********************************************/
+.albums_title b{
+    color: white;
+    /*font-weight: 900;*/
+    font-size: 22px;
+    padding: 8px;
+}
+
+.body_albums{
+    background-color: #1a1a1a;
+    position: relative;
+    top: -27px;
+}
+.body_albums .row_1{
+    position: relative;
+    top: -18px;
+    
+}
+
+  .wrapper {
+  overflow: hidden;
+}
+.wrapper article {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+}
+.wrapper article .item {
+  padding: 0 2px;
+}
+
+#article1{
+    padding-left: 2px;
+}
+
+#item1, #item2{
+    padding-right: 12px;
+}
+
+#hot_hits_album, #todays_top_hits,
+#hot_rhythmic, #pumped_pop{
+    width: 12rem;
+    border-radius: 5px;
+}
+
+#pop_rising{
+    width: 11rem;
+    position: relative;
+    top: 0px;
+    border-radius: 5px;
+}
+
+#mega_hit_mix{
+    width: 12.25rem;
+    position: relative;
+    top: -1px;
+    border-radius: 5px;
+}
+.album_title_text{
+    color: white;
+    display: block;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.album_body_text{
+    color: grey;
+    margin: 0;
+    display: block;
+    width: 13rem;
+} 
+
+/***************************
+*   bottom--nav bar menu
+*
+**************************/
+.bottom_iphone_section_2 {
+    /* alt colors might use: #2e3236 or #222528 */
+    background-color: #272727; /*#303434;*/ /*#17191a;*/
+    position: absolute;
+    bottom: -1px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 105px;
+
+    font-size: 12px;
+    font-weight: 100;
+}
+
+
+
+.bottom_iphone_section_2 .spotify_home{
+    width:  62%;
+    margin-left: 22%;
+    
+}
+
+.bottom_iphone_section_2 .spotify_albums{
+    width: 51%;
+    margin-left: 25%;
+}
+.bottom_iphone_section_2 .spotify_search {
+    width: 46%;
+    margin-left: 33%;
+}
+
+.bottom_iphone_section_2 .spotify_radio{
+    width: 52%;
+    margin-left: 23%;
+}
+
+
+.bottom_iphone_section_2 .spotify_library{
+    width: 54%;
+    margin-left: 19%;
+}
+
+/* to position the images in nav menu bar horizontally */
+dt {
+    float: left;
+    width: 19.33%;
+    padding: 5px;  
+}
+
+#home, #browse, #search_bar,
+#radio{
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+#library{
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    margin-left: -12%;
+}
+
+
+dt a{
+    text-decoration: none;  
+}
+  
+/* Clear floats after image containers */
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+.bottom_iphone_section_2 .home_bar {
+    width: 140px;
+    height: 4px;
+    background-color: #f5f5f5; /* white smoke */
+
+    /*make all corners circular*/
+    border-radius: 10px; 
+
+    /*help center home bar*/
+    margin: 0px 110px auto;
+
+    /* position it at bottom of the phone,
+    below the action buttons*/
+    position: absolute;
+    bottom: 10px;
+}
+
+
+/******************************************
+*
+*
+*
+*           MEDIA QUERIES
+*
+*
+*
+*
+********************************************/
+
+ /* On screens that are 870px or less, set the background color to olive */
+  @media screen and (max-width: 1230px) {
+    main {
+        display: block;
+        margin: 25px 65px 25px 63px;
+        padding-left: 9%;
+    }
+  }
+
+  @media screen and (max-width: 1130px) {
+    main {
+        display: block;
+        margin: 25px 45px 25px 45px;
+        padding-left: 9%;
+    }
+  }
+
+  @media screen and (max-width: 1090px) {
+    main {
+        display: block;
+        margin: 25px 25px 25px 25px;
+        padding-left: 9%;
+
+    }
+  }
+
+  @media screen and (max-width: 1060px) {
+    main {
+        display: block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 8%;
+
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 28%;
+
+    }
+  }
+
+  @media screen and (max-width: 910px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 23%;
+
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 20%;
+
+    }
+  }
+
+  @media screen and (max-width: 725px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 17%;
+
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 13%;
+
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 9%;
+
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 6%;
+
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    main {
+        display: inline-block;
+        margin: 25px 10px 25px 10px;
+        padding-left: 3%;
+
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    main {
+        display: inline-block;
+        margin: 25px 7px 25px 10px;
+        padding-left: 1%;
+
+    }
+  }
