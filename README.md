@@ -37,4 +37,4 @@ Note: I don't own any of the Spotify images that were used for this layout. This
 # Output
 
 * Click on the link below to view the Apple iPhone X front layout and Spotify Layout
-    * [Apple iPhone X - Spotify](www.google.com)
+    * [Apple iPhone X - Spotify](https://jennym0715.github.io/iPhoneX_Spotify.github.io/)
