@@ -17,7 +17,7 @@ Note: I don't own any of the Spotify images that were used for this layout. This
 
 * For the favicon, I used Flaticon to get a png
     * [Flaticon](https://www.flaticon.com/)
-    * [Favicon Converter]()
+    * [Favicon Converter](https://favicon.io/favicon-converter/)
 
 
 * I used this cdnjs cloudflare link to get Font-Awesome 4.7.0
